@@ -13,24 +13,19 @@ export default function FirstPage ({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  useEffect (() => {
-    const unsubsribe = onAuthStateChanged(auth, (user) =>{
-      if(user){
-        navigation.navigate("FirstPage")
-      }
-    })
-    return unsubsribe;
-  },[]);
-
   const handleLogIn = () => {
-      console.log("login called");
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
           console.log('Logged In with:', user.email);
-        })
-    .then((navigation.navigate("MainPage")))
-    .catch(error => alert(error.message))
+          if(user.email){
+            navigation.navigate("MainPage")
+          }
+        }) //.then())
+
+    .catch((error) => {
+      alert(error.message)
+    })
   }
 
   return (
