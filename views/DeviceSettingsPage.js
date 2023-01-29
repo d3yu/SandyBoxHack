@@ -6,7 +6,7 @@ import {auth} from "../config/firebase";
 
 
 // this page's color is not fully covered
-export default RideHistoryPage = ({navigation}) => {
+export default DeviceSettingsPage = ({navigation}) => {
     const user = auth.currentUser;
     const handleSignOut = () => {
         signOut(auth)
