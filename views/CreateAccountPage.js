@@ -20,11 +20,13 @@ export default function CreateAccountPage ({ navigation }) {
      createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-          console.log('Registered with:', user.email);
-      }).then(navigation.navigate('FirstPage'))
-      .catch(error => alert(error.message))
+          console.log('Registered with:', user.email),
+          navigation.navigate('CheckListPage');
+      })
+      .catch(error => alert(error.message),
+       navigation.navigate('CreateAccountPage'))
       //Taking back to first page after an error
-      .then(navigation.navigate('FirstPage'))
+      //.then()
     }
   
 

@@ -1,7 +1,7 @@
 // this is the initial page when user enters Settings
 import { StyleSheet, Text, View, Image} from 'react-native';
 import React, {useState} from 'react';
-
+import { ThreeDot } from './VectorIcon.js';
 
 
 export default AdjustBubble = ({ navigation }) => {
@@ -9,32 +9,40 @@ export default AdjustBubble = ({ navigation }) => {
     <View style = {styles.mainContainer}>
         <Text style = {styles.titleText}>Adjust Bubbles</Text>
         <View style = {styles.containerOne}>
-            <Text style = {styles.textLeft}>A</Text><Text style ={styles.textMiddle}>Home</Text><Text style = {styles.imageRight}>img</Text>
+            <Text style = {styles.textLeft}>A</Text>
+            <Text style ={styles.textMiddle}>Home</Text>
+            <ThreeDot />
         </View>
 
         <View style = {styles.containerTwo}>
             <Text style = {styles.textLeft}>B</Text>
             <Text style ={styles.textMiddle}>UCSD</Text>
+            <ThreeDot />
         </View>
+        
 
         <View style = {styles.containerThree}>
             <Text style = {styles.textLeft}>C</Text>
             <Text style ={styles.textMiddle}>hMart</Text>
+            <ThreeDot />
         </View>
 
         <View style = {styles.containerFour}>
             <Text style = {styles.textLeft}>D</Text>
             <Text style ={styles.textMiddle}>Harry's home</Text>
+            <ThreeDot />
         </View>
 
         <View style = {styles.containerFive}>
             <Text style = {styles.textLeft}>E</Text>
             <Text style ={styles.textMiddle}>Hospital</Text>
+            <ThreeDot />
         </View>
 
         <View style = {styles.containerSix}>
             <Text style = {styles.textLeft}>F</Text>
             <Text style ={styles.textMiddle}>Pacific Beach</Text>
+            <ThreeDot />
         </View>
     </View>
   );
@@ -137,5 +145,6 @@ const styles = StyleSheet.create({
         left: 280,
         top: 27,
     },
+    
 });
 

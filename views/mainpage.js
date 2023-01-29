@@ -21,18 +21,23 @@ const styles = StyleSheet.create({
         flex:1,
         flexDirection: 'column',
         padding: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     container_top: {
         flex:1,
         backgroundColor: 'rgba(125, 211, 159, 1)',
         justifyContent: 'center',
         alignItems: 'center',
+        width: '105%',
+        
     },
     container_bottom: {
         flex:1,
         backgroundColor: 'rgba(194, 158, 239, 1)',
         justifyContent: 'center',
         alignItems: 'center',
+        width: '105%',
         
     },
     textOne: {
